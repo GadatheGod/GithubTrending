@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+  <!-- Background -->
+  <rect width="1200" height="800" fill="#f6f6ef"/>
+  
+  <!-- Header -->
+  <rect width="1200" height="60" fill="#ff6600"/>
+  <text x="40" y="40" font-family="Arial, sans-serif" font-size="24" font-weight="bold" fill="white">
+    <tspan font-family="Font Awesome 6 Free" fill="white"></tspan> Trending
+  </text>
+  <text x="200" y="40" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.85)">Today</text>
+  <text x="280" y="40" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.85)">Week</text>
+  <text x="350" y="40" font-family="Arial, sans-serif" font-size="16" fill="rgba(255,255,255,0.85)">Month</text>
+  
+  <!-- Stats Bar -->
+  <rect y="60" width="1200" height="30" fill="white"/>
+  <text x="40" y="80" font-family="Arial, sans-serif" font-size="12" fill="#666">
+    <tspan font-family="Font Awesome 6 Free" fill="#ff6600">🔥</tspan> 10 trending repositories
+  </text>
+  
+  <!-- Table Header -->
+  <rect y="90" width="1200" height="40" fill="white"/>
+  <text x="60" y="115" font-family="Arial, sans-serif" font-size="14" fill="#999">#</text>
+  <text x="120" y="115" font-family="Arial, sans-serif" font-size="14" fill="#666">Repository</text>
+  <text x="400" y="115" font-family="Arial, sans-serif" font-size="14" fill="#666">Description</text>
+  <text x="800" y="115" font-family="Arial, sans-serif" font-size="14" fill="#666">Stars</text>
+  <text x="920" y="115" font-family="Arial, sans-serif" font-size="14" fill="#666">Language</text>
+  
+  <!-- Sample Rows -->
+  <rect y="130" width="1200" height="60" fill="white"/>
+  <text x="60" y="165" font-family="Arial, sans-serif" font-size="14" fill="#999">1</text>
+  <text x="120" y="165" font-family="Arial, sans-serif" font-size="14" fill="#111" font-weight="bold">anthropic/system-prompts</text>
+  <text x="400" y="165" font-family="Arial, sans-serif" font-size="12" fill="#555">Extracted system prompts from Claude, Opus, GPT...</text>
+  <text x="800" y="165" font-family="Arial, sans-serif" font-size="12" fill="#ff6600" font-weight="bold">51k</text>
+  <circle cx="940" cy="160" r="5" fill="#3572A5"/>
+  <text x="960" y="165" font-family="Arial, sans-serif" font-size="12" fill="#444">Python</text>
+  
+  <rect y="190" width="1200" height="60" fill="white"/>
+  <text x="60" y="225" font-family="Arial, sans-serif" font-size="14" fill="#999">2</text>
+  <text x="120" y="225" font-family="Arial, sans-serif" font-size="14" fill="#111" font-weight="bold">meetily/meetily</text>
+  <text x="400" y="225" font-family="Arial, sans-serif" font-size="12" fill="#555">Privacy-first AI meeting assistant with 4x faster...</text>
+  <text x="800" y="225" font-family="Arial, sans-serif" font-size="12" fill="#ff6600" font-weight="bold">12k</text>
+  <circle cx="940" cy="220" r="5" fill="#dea584"/>
+  <text x="960" y="225" font-family="Arial, sans-serif" font-size="12" fill="#444">Rust</text>
+  
+  <rect y="250" width="1200" height="60" fill="white"/>
+  <text x="60" y="285" font-family="Arial, sans-serif" font-size="14" fill="#999">3</text>
+  <text x="120" y="285" font-family="Arial, sans-serif" font-size="14" fill="#111" font-weight="bold">apple/container</text>
+  <text x="400" y="285" font-family="Arial, sans-serif" font-size="12" fill="#555">A tool for creating and running Linux containers...</text>
+  <text x="800" y="285" font-family="Arial, sans-serif" font-size="12" fill="#ff6600" font-weight="bold">8k</text>
+  <circle cx="940" cy="280" r="5" fill="#3178c6"/>
+  <text x="960" y="285" font-family="Arial, sans-serif" font-size="12" fill="#444">TypeScript</text>
+  
+  <!-- Watermark -->
+  <text x="600" y="750" font-family="Arial, sans-serif" font-size="14" fill="#ccc" text-anchor="middle">
+    GitHub Trending - Live Demo
+  </text>
+</svg>
