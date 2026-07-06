@@ -3,8 +3,9 @@ let currentPeriod = 'today';
 
 const feed = document.getElementById('feedContainer');
 const searchInput = document.getElementById('searchInput');
-const languageFilter = document.getElementById('languageFilter');
 const refreshBtn = document.getElementById('refreshBtn');
+const repoCountEl = document.getElementById('repoCount');
+const updateTimeEl = document.getElementById('updateTime');
 const timeLinks = document.querySelectorAll('.time-link');
 
 async function loadTrendingData() {
@@ -12,7 +13,7 @@ async function loadTrendingData() {
     const response = await fetch('data/trending.json');
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     trendingData = await response.json();
-    populateLanguageFilter();
+    updateStats(getCurrentRepos().length);
     renderFeed(getCurrentRepos());
   } catch (err) {
     feed.innerHTML = `<div class="no-results"><i class="fas fa-exclamation-circle"></i> Failed to load trending data. Please try again later.</div>`;
@@ -23,20 +24,9 @@ function getCurrentRepos() {
   return trendingData[currentPeriod]?.repos || [];
 }
 
-function populateLanguageFilter() {
-  const allRepos = Object.values(trendingData)
-    .flatMap(period => period.repos || [])
-    .map(repo => repo.language)
-    .filter(Boolean);
-
-  const uniqueLanguages = [...new Set(allRepos)].sort();
-
-  uniqueLanguages.forEach(lang => {
-    const option = document.createElement('option');
-    option.value = lang;
-    option.textContent = lang;
-    languageFilter.appendChild(option);
-  });
+function updateStats(count) {
+  repoCountEl.textContent = `${count} trending repositories`;
+  updateTimeEl.textContent = 'Just now';
 }
 
 function formatStars(stars) {
@@ -46,91 +36,70 @@ function formatStars(stars) {
   return stars.toString();
 }
 
+function getLangClass(lang) {
+  const map = {
+    'Python': 'lang-python',
+    'Rust': 'lang-rust',
+    'C++': 'lang-cpp',
+    'TypeScript': 'lang-typescript',
+    'JavaScript': 'lang-javascript',
+    'Go': 'lang-go',
+    'Shell': 'lang-shell',
+    'Ruby': 'lang-ruby'
+  };
+  return map[lang] || '';
+}
+
 function renderFeed(data) {
   feed.innerHTML = '';
+  if (data.length === 0) {
+    const empty = document.createElement('div');
+    empty.className = 'no-results';
+    empty.innerHTML = '<i class="fas fa-search-minus"></i> No repositories match your search.';
+    feed.appendChild(empty);
+    return;
+  }
+
   data.forEach((repo) => {
     const item = document.createElement('div');
-    item.className = 'feed-item';
+    item.className = `feed-item ${getLangClass(repo.language)}`;
 
-    // ── Rank ──
-    const rankDiv = document.createElement('div');
-    rankDiv.className = 'rank';
-    rankDiv.textContent = repo.rank;
+    // Rank
+    const rank = document.createElement('div');
+    rank.className = 'col-rank';
+    rank.textContent = repo.rank;
 
-    // ── Content ──
-    const contentDiv = document.createElement('div');
-    contentDiv.className = 'item-content';
+    // Repo name
+    const repoCol = document.createElement('div');
+    repoCol.className = 'col-repo';
+    repoCol.innerHTML = `<i class="fas fa-book repo-icon"></i> <span class="repo-name"><a href="${repo.url}" target="_blank" rel="noopener">${repo.name}</a></span>`;
 
-    const titleDiv = document.createElement('div');
-    titleDiv.className = 'item-title';
+    // Description
+    const desc = document.createElement('div');
+    desc.className = 'col-description';
+    desc.textContent = repo.description || '';
 
-    const nameSpan = document.createElement('span');
-    nameSpan.className = 'repo-name';
-    nameSpan.innerHTML = `<a href="${repo.url}" target="_blank" rel="noopener">${repo.name}</a>`;
+    // Stars
+    const stars = document.createElement('div');
+    stars.className = 'col-stars';
+    stars.innerHTML = `<i class="fas fa-star"></i> <span class="stars-count">${formatStars(repo.stars)}</span>`;
 
-    const expandBtn = document.createElement('button');
-    expandBtn.className = 'expand-toggle';
-    expandBtn.innerHTML = '▼';
-    expandBtn.setAttribute('aria-label', 'Toggle details');
+    // Language
+    const lang = document.createElement('div');
+    lang.className = 'col-language';
+    lang.innerHTML = `<span class="lang-dot"></span> ${repo.language}`;
 
-    const descDiv = document.createElement('div');
-    descDiv.className = 'repo-description';
-    descDiv.textContent = repo.description || '';
+    // Action (GitHub link)
+    const action = document.createElement('div');
+    action.className = 'col-action';
+    action.innerHTML = `<a href="${repo.url}" class="github-link" title="View on GitHub" target="_blank" rel="noopener"><i class="fab fa-github"></i></a>`;
 
-    titleDiv.appendChild(nameSpan);
-    titleDiv.appendChild(expandBtn);
-    contentDiv.appendChild(titleDiv);
-    contentDiv.appendChild(descDiv);
-
-    // ── Metrics ──
-    const metricsDiv = document.createElement('div');
-    metricsDiv.className = 'item-metrics';
-
-    const starsMetric = document.createElement('span');
-    starsMetric.className = 'metric';
-    starsMetric.innerHTML = `<i class="fas fa-star"></i> <span class="stars-today">${formatStars(repo.stars)}</span>`;
-
-    const langTag = document.createElement('span');
-    langTag.className = 'language-tag';
-    langTag.textContent = repo.language;
-
-    metricsDiv.appendChild(starsMetric);
-    metricsDiv.appendChild(langTag);
-
-    // ── Details ──
-    const detailsDiv = document.createElement('div');
-    detailsDiv.className = 'item-details';
-
-    const inner = document.createElement('div');
-    inner.className = 'item-details-inner';
-
-    const fullDesc = document.createElement('span');
-    fullDesc.className = 'full-desc';
-    fullDesc.textContent = repo.description || '';
-
-    const githubBtn = document.createElement('a');
-    githubBtn.className = 'btn-github';
-    githubBtn.href = repo.url;
-    githubBtn.target = '_blank';
-    githubBtn.rel = 'noopener';
-    githubBtn.innerHTML = `<i class="fab fa-github"></i> View on GitHub`;
-
-    inner.appendChild(fullDesc);
-    inner.appendChild(githubBtn);
-    detailsDiv.appendChild(inner);
-
-    // ── Assemble ──
-    item.appendChild(rankDiv);
-    item.appendChild(contentDiv);
-    item.appendChild(metricsDiv);
-    item.appendChild(detailsDiv);
-
-    // ── Toggle ──
-    expandBtn.addEventListener('click', (e) => {
-      e.stopPropagation();
-      const isExpanded = item.classList.toggle('expanded');
-      expandBtn.innerHTML = isExpanded ? '▲' : '▼';
-    });
+    item.appendChild(rank);
+    item.appendChild(repoCol);
+    item.appendChild(desc);
+    item.appendChild(stars);
+    item.appendChild(lang);
+    item.appendChild(action);
 
     feed.appendChild(item);
   });
@@ -138,28 +107,15 @@ function renderFeed(data) {
 
 function filterFeed(query) {
   const q = query.toLowerCase().trim();
-  const items = feed.querySelectorAll('.feed-item');
-  let visibleCount = 0;
-  items.forEach(item => {
-    const name = item.querySelector('.repo-name')?.textContent?.toLowerCase() || '';
-    const desc = item.querySelector('.repo-description')?.textContent?.toLowerCase() || '';
-    const lang = item.querySelector('.language-tag')?.textContent?.toLowerCase() || '';
-    const match = name.includes(q) || desc.includes(q) || lang.includes(q);
-    item.style.display = match ? 'flex' : 'none';
-    if (match) visibleCount++;
+  const repos = getCurrentRepos();
+  const filtered = repos.filter(repo => {
+    const name = repo.name.toLowerCase();
+    const desc = repo.description?.toLowerCase() || '';
+    const lang = repo.language.toLowerCase();
+    return name.includes(q) || desc.includes(q) || lang.includes(q);
   });
-
-  let noResult = feed.querySelector('.no-results');
-  if (visibleCount === 0 && q.length > 0) {
-    if (!noResult) {
-      noResult = document.createElement('div');
-      noResult.className = 'no-results';
-      noResult.innerHTML = '<i class="fas fa-search-minus"></i> No repositories match your search.';
-      feed.appendChild(noResult);
-    }
-  } else {
-    if (noResult) noResult.remove();
-  }
+  renderFeed(filtered);
+  updateStats(filtered.length);
 }
 
 timeLinks.forEach(link => {
@@ -169,25 +125,12 @@ timeLinks.forEach(link => {
     link.classList.add('active');
     currentPeriod = link.dataset.period;
     searchInput.value = '';
-    languageFilter.value = '';
     filterFeed('');
-    const repos = getCurrentRepos();
-    const language = languageFilter.value;
-    const filtered = language ? repos.filter(r => r.language === language) : repos;
-    renderFeed(filtered);
   });
 });
 
 searchInput.addEventListener('input', (e) => {
   filterFeed(e.target.value);
-});
-
-languageFilter.addEventListener('change', () => {
-  const repos = getCurrentRepos();
-  const language = languageFilter.value;
-  const filtered = language ? repos.filter(r => r.language === language) : repos;
-  renderFeed(filtered);
-  filterFeed(searchInput.value);
 });
 
 refreshBtn.addEventListener('click', () => {
@@ -198,11 +141,8 @@ refreshBtn.addEventListener('click', () => {
     refreshBtn.innerHTML = '<i class="fas fa-sync-alt"></i> Refresh';
     refreshBtn.disabled = false;
     searchInput.value = '';
-    languageFilter.value = '';
     filterFeed('');
-    document.querySelectorAll('.feed-item').forEach(el => el.classList.remove('expanded'));
-    document.querySelectorAll('.expand-toggle').forEach(btn => btn.innerHTML = '▼');
-  }, 600);
+  }, 500);
 });
 
 loadTrendingData();

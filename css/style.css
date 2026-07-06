@@ -13,27 +13,26 @@ body {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
 /* ─── Header ─── */
 .header {
     background: #ff6600;
-    padding: 12px 20px;
-    border-radius: 6px 6px 0 0;
+    padding: 12px 24px;
+    border-radius: 8px 8px 0 0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
     gap: 12px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08);
 }
 
 .header-left {
     display: flex;
     align-items: center;
-    gap: 14px;
+    gap: 16px;
     flex-wrap: wrap;
 }
 
@@ -41,15 +40,18 @@ body {
     font-weight: 700;
     font-size: 1.3rem;
     color: white;
-    letter-spacing: -0.5px;
     display: flex;
     align-items: center;
     gap: 8px;
 }
 
+.logo i {
+    font-size: 1.2rem;
+}
+
 .header-nav {
     display: flex;
-    gap: 6px;
+    gap: 4px;
     font-size: 0.9rem;
     color: rgba(255, 255, 255, 0.85);
 }
@@ -57,18 +59,18 @@ body {
 .header-nav a {
     color: white;
     text-decoration: none;
-    padding: 2px 6px;
+    padding: 4px 10px;
     border-radius: 4px;
     transition: background 0.15s;
 }
 
-.header-nav a:hover,
-.header-nav a.active {
+.header-nav a:hover {
     background: rgba(255, 255, 255, 0.2);
 }
 
-.header-nav span {
-    cursor: default;
+.header-nav a.active {
+    background: rgba(255, 255, 255, 0.25);
+    font-weight: 600;
 }
 
 .header-right {
@@ -81,11 +83,11 @@ body {
 .search-box {
     background: rgba(255, 255, 255, 0.2);
     border-radius: 30px;
-    padding: 4px 14px 4px 18px;
+    padding: 4px 16px 4px 18px;
     display: flex;
     align-items: center;
     gap: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .search-box input {
@@ -94,7 +96,7 @@ body {
     padding: 6px 0;
     font-size: 0.9rem;
     color: white;
-    width: 140px;
+    width: 160px;
     outline: none;
 }
 
@@ -104,34 +106,13 @@ body {
 
 .search-box i {
     color: rgba(255, 255, 255, 0.8);
-    font-size: 0.85rem;
-}
-
-.language-select {
-    background: rgba(255, 255, 255, 0.2);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    color: white;
-    padding: 6px 32px 6px 12px;
-    border-radius: 30px;
-    font-size: 0.85rem;
-    cursor: pointer;
-    outline: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='rgba(255,255,255,0.8)' stroke-width='2'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 12px center;
-}
-
-.language-select option {
-    background: #ff6600;
-    color: white;
 }
 
 .refresh-btn {
     background: rgba(255, 255, 255, 0.15);
     border: 1px solid rgba(255, 255, 255, 0.2);
     color: white;
-    padding: 6px 16px;
+    padding: 6px 18px;
     border-radius: 30px;
     font-size: 0.85rem;
     font-weight: 500;
@@ -144,26 +125,48 @@ body {
 
 .refresh-btn:hover {
     background: rgba(255, 255, 255, 0.3);
-    transform: scale(1.02);
+}
+
+.refresh-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* ─── Stats Bar ─── */
+.stats-bar {
+    background: #fff;
+    padding: 8px 24px;
+    border-bottom: 1px solid #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+    color: #666;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.stats-bar span i {
+    margin-right: 4px;
 }
 
 /* ─── Feed ─── */
 .feed {
     background: white;
-    border-radius: 0 0 6px 6px;
+    border-radius: 0 0 8px 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
-    padding: 0;
+    overflow-x: auto;
 }
 
-/* ─── FEED ITEM — FIXED LAYOUT ─── */
+/* ─── Table-like Row Layout ─── */
 .feed-item {
-    display: flex;
+    display: grid;
+    grid-template-columns: 48px minmax(200px, 1fr) 2fr 110px 100px 48px;
     align-items: center;
     padding: 10px 20px;
-    border-bottom: 1px solid #eaeaea;
+    border-bottom: 1px solid #f0f0ed;
     transition: background 0.12s;
-    gap: 16px;
-    flex-wrap: nowrap;
+    gap: 12px;
+    min-width: 720px;
 }
 
 .feed-item:hover {
@@ -174,172 +177,155 @@ body {
     border-bottom: none;
 }
 
-/* Rank — fixed width */
-.rank {
+/* ─── Columns ─── */
+.col-rank {
     color: #999;
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     font-weight: 400;
-    min-width: 36px;
     text-align: right;
-    flex-shrink: 0;
 }
 
-/* Content — takes remaining space */
-.item-content {
-    flex: 1 1 auto;
+.col-repo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     min-width: 0;
 }
 
-.item-title {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    flex-wrap: wrap;
-}
-
-.repo-name {
-    font-weight: 600;
-    font-size: 1rem;
-    color: #111;
-    white-space: nowrap;
-}
-
-.repo-name a {
-    color: #111;
-    text-decoration: none;
-}
-
-.repo-name a:hover {
-    text-decoration: underline;
-}
-
-.repo-description {
+.col-repo .repo-icon {
+    color: #666;
     font-size: 0.9rem;
-    color: #555;
-    margin-top: 1px;
+    flex-shrink: 0;
+}
+
+.col-repo .repo-name {
+    font-weight: 600;
+    font-size: 0.92rem;
+    color: #111;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
-    max-width: 420px;
 }
 
-/* Metrics — fixed width on right */
-.item-metrics {
-    display: flex;
-    align-items: center;
-    gap: 14px;
-    flex-shrink: 0;
-    margin-left: auto;
-}
-
-.metric {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    font-size: 0.8rem;
-    color: #555;
-    white-space: nowrap;
-}
-
-.metric i {
-    font-size: 0.75rem;
-    color: #888;
-}
-
-.metric .stars-today {
-    color: #ff6600;
-    font-weight: 600;
-}
-
-.language-tag {
-    background: #eae9e3;
-    padding: 2px 10px;
-    border-radius: 30px;
-    font-size: 0.7rem;
-    font-weight: 500;
-    color: #444;
-    letter-spacing: 0.3px;
-    white-space: nowrap;
-}
-
-.expand-toggle {
-    background: none;
-    border: none;
-    color: #999;
-    font-size: 0.65rem;
-    cursor: pointer;
-    padding: 2px 6px;
-    border-radius: 4px;
-    transition: background 0.15s;
-    flex-shrink: 0;
-}
-
-.expand-toggle:hover {
-    background: #eae9e3;
-    color: #333;
-}
-
-/* ─── Expandable Details ─── */
-.item-details {
-    max-height: 0;
-    overflow: hidden;
-    transition: max-height 0.25s ease, padding 0.2s ease;
-    padding: 0 20px 0 52px;
-}
-
-.feed-item.expanded .item-details {
-    max-height: 200px;
-    padding: 8px 20px 12px 52px;
-}
-
-.item-details-inner {
-    background: #f9f9f6;
-    padding: 12px 16px;
-    border-radius: 6px;
-    border-left: 3px solid #ff6600;
-    font-size: 0.9rem;
-    color: #333;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: space-between;
-    gap: 12px;
-}
-
-.item-details-inner .full-desc {
-    flex: 1;
-    min-width: 160px;
-}
-
-.btn-github {
-    background: #222;
-    color: white;
-    border: none;
-    padding: 6px 18px;
-    border-radius: 30px;
-    font-size: 0.8rem;
-    font-weight: 500;
-    cursor: pointer;
-    transition: background 0.2s;
-    white-space: nowrap;
-    display: inline-flex;
-    align-items: center;
-    gap: 6px;
+.col-repo .repo-name a {
+    color: #111;
     text-decoration: none;
 }
 
-.btn-github:hover {
-    background: #000;
+.col-repo .repo-name a:hover {
+    text-decoration: underline;
 }
 
-.btn-github i {
+.col-description {
+    font-size: 0.85rem;
+    color: #555;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.col-stars {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.85rem;
+    color: #444;
+    white-space: nowrap;
+}
+
+.col-stars i {
+    color: #ff6600;
+    font-size: 0.8rem;
+}
+
+.col-stars .stars-count {
+    font-weight: 600;
+    color: #ff6600;
+}
+
+.col-language {
     font-size: 0.75rem;
+    font-weight: 500;
+    color: #444;
+    white-space: nowrap;
+}
+
+.col-language .lang-dot {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.col-action {
+    text-align: right;
+}
+
+.col-action .github-link {
+    color: #888;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+    text-decoration: none;
+}
+
+.col-action .github-link:hover {
+    color: #222;
+}
+
+/* ─── Language colors ─── */
+.lang-python .lang-dot {
+    background: #3572A5;
+}
+
+.lang-rust .lang-dot {
+    background: #dea584;
+}
+
+.lang-cpp .lang-dot {
+    background: #f34b7d;
+}
+
+.lang-typescript .lang-dot {
+    background: #3178c6;
+}
+
+.lang-javascript .lang-dot {
+    background: #f1e05a;
+}
+
+.lang-go .lang-dot {
+    background: #00add8;
+}
+
+.lang-shell .lang-dot {
+    background: #89e051;
+}
+
+.lang-ruby .lang-dot {
+    background: #701516;
+}
+
+/* ─── No results ─── */
+.no-results {
+    padding: 40px 20px;
+    text-align: center;
+    color: #888;
+    font-size: 0.95rem;
+    grid-column: 1 / -1;
 }
 
 /* ─── Responsive ─── */
-@media (max-width: 820px) {
-    .repo-description {
-        max-width: 200px;
+@media (max-width: 900px) {
+    .feed-item {
+        grid-template-columns: 40px 1fr 1.2fr 80px 80px 36px;
+        padding: 10px 16px;
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+    .col-description {
+        font-size: 0.8rem;
     }
 }
 
@@ -348,6 +334,7 @@ body {
         flex-direction: column;
         align-items: stretch;
         gap: 10px;
+        border-radius: 8px 8px 0 0;
     }
     .header-left,
     .header-right {
@@ -355,37 +342,37 @@ body {
         justify-content: center;
     }
     .search-box input {
-        width: 100px;
+        width: 120px;
     }
-
+    .stats-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .feed {
+        border-radius: 0 0 8px 8px;
+        overflow-x: auto;
+    }
     .feed-item {
-        flex-wrap: wrap;
-        padding: 10px 16px;
-        gap: 8px;
-    }
-
-    .rank {
-        min-width: 28px;
+        min-width: 650px;
+        padding: 8px 12px;
+        gap: 6px;
         font-size: 0.8rem;
     }
-
-    .repo-description {
-        max-width: 100%;
-        white-space: normal;
+    .col-repo .repo-name {
+        font-size: 0.82rem;
     }
-
-    .item-metrics {
-        margin-left: 0;
-        width: 100%;
-        justify-content: flex-start;
-        padding-left: 44px;
+    .col-description {
+        font-size: 0.75rem;
     }
-
-    .item-details {
-        padding: 0 16px 0 16px;
+    .col-stars {
+        font-size: 0.75rem;
     }
-    .feed-item.expanded .item-details {
-        padding: 8px 16px 12px 16px;
+    .col-language {
+        font-size: 0.7rem;
+    }
+    .col-rank {
+        font-size: 0.75rem;
     }
 }
 
@@ -393,37 +380,37 @@ body {
     body {
         padding: 10px;
     }
-    .repo-name {
-        font-size: 0.9rem;
-        white-space: normal;
+    .header {
+        padding: 10px 14px;
     }
-    .repo-description {
+    .logo {
+        font-size: 1.1rem;
+    }
+    .header-nav a {
+        font-size: 0.8rem;
+        padding: 2px 6px;
+    }
+    .search-box input {
+        width: 80px;
         font-size: 0.8rem;
     }
-    .item-metrics {
-        padding-left: 36px;
-        gap: 10px;
+    .refresh-btn {
+        font-size: 0.75rem;
+        padding: 4px 12px;
     }
-    .language-tag {
-        font-size: 0.6rem;
-        padding: 1px 8px;
+    .feed-item {
+        min-width: 580px;
+        padding: 6px 10px;
+        gap: 4px;
+        font-size: 0.7rem;
     }
-    .item-details-inner {
-        flex-direction: column;
-        align-items: stretch;
+    .col-rank {
+        min-width: 24px;
     }
-    .btn-github {
-        align-self: flex-start;
+    .col-repo .repo-name {
+        font-size: 0.75rem;
     }
-}
-
-/* ─── No results ─── */
-.no-results {
-    padding: 30px 20px;
-    text-align: center;
-    color: #888;
-    font-size: 0.95rem;
-}
-.no-results i {
-    margin-right: 8px;
+    .col-description {
+        font-size: 0.7rem;
+    }
 }
