@@ -10,7 +10,6 @@ function render(repoListEl, noResultsEl, repos, hasSearch) {
 
   repoListEl.innerHTML = repos.map(repo => `
     <a href="${repo.url}" target="_blank" rel="noopener" class="repo-card">
-      <span class="repo-rank">${repo.rank}</span>
       <div class="repo-content">
         <div class="repo-name">
           <a href="${repo.url}" target="_blank" rel="noopener">${repo.name}</a>
