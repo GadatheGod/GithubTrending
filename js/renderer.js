@@ -64,4 +64,8 @@ function formatStars(stars) {
   return stars.toString();
 }
 
-module.exports = { render };
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { render };
+} else {
+  window.renderer = { render };
+}

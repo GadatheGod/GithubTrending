@@ -52,4 +52,8 @@ function filter(repos, { search, language, sortBy }) {
   return result;
 }
 
-module.exports = { filter, getLanguageColor, formatStars };
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { filter, getLanguageColor, formatStars };
+} else {
+  window.filters = { filter, getLanguageColor, formatStars };
+}

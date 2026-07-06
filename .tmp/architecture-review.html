@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GithubTrending — Architecture Review</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js"></script>
+  <script>mermaid.initialize({ startOnLoad: false, theme: 'default' });</script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+    body { font-family: 'Inter', sans-serif; }
+    .before-after { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .before, .after { padding: 20px; border-radius: 12px; }
+    .before { background: #fef2f2; border: 1px solid #fecaca; }
+    .after { background: #f0fdf4; border: 1px solid #bbf7d0; }
+    .mermaid { display: flex; justify-content: center; margin: 16px 0; }
+    .badge { display: inline-block; padding: 2px 10px; border-radius: 9999px; font-size: 0.75rem; font-weight: 600; }
+    .badge-strong { background: #dcfce7; color: #166534; }
+    .badge-exploring { background: #fef3c7; color: #92400e; }
+    .badge-speculative { background: #f3e8ff; color: #6b21a8; }
+    .card { border: 1px solid #e5e7eb; border-radius: 12px; padding: 24px; margin-bottom: 24px; background: white; }
+    .section-title { font-size: 1.125rem; font-weight: 600; margin: 16px 0 8px; color: #111827; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+  <div class="max-w-5xl mx-auto px-6 py-12">
+
+    <div class="mb-12">
+      <h1 class="text-3xl font-bold text-gray-900 mb-2">GithubTrending — Architecture Review</h1>
+      <p class="text-gray-500">Deepening opportunities for testability and AI-navigability</p>
+      <p class="text-sm text-gray-400 mt-2">Generated 2026-07-07 &middot; No CONTEXT.md or ADRs found</p>
+    </div>
+
+    <!-- Candidate 1 -->
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-gray-900">1. Extract frontend into deep modules</h2>
+        <span class="badge badge-strong">Strong</span>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Files</h3>
+        <code class="text-sm bg-gray-100 px-2 py-1 rounded">js/app.js</code>
+        <p class="text-sm text-gray-600 mt-2">168 lines, zero exports, six responsibilities mixed in one file</p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Problem</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <code class="bg-gray-100 px-1 rounded">js/app.js</code> is a <strong>monolithic module</strong> with no interface boundaries. It mixes configuration (<code class="bg-gray-100 px-1 rounded">LANGUAGE_COLORS</code>), state management, data fetching, filtering logic, DOM rendering, and event binding. To understand any single behavior — say, how a search query filters repos — you must read the entire file.
+        </p>
+        <p class="text-gray-700 text-sm leading-relaxed mt-2">
+          <code class="bg-gray-100 px-1 rounded">applyFilters</code> has six responsibilities: get repos, filter by search, filter by language, sort, mutate state, and call <code class="bg-gray-100 px-1 rounded">renderRepos</code>. <code class="bg-gray-100 px-1 rounded">renderRepos</code> references <code class="bg-gray-100 px-1 rounded">searchInput</code> from closure, so it cannot be unit-tested without a DOM. The entire frontend exports zero functions — there is no <strong>seam</strong> to cross for testing.
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Solution</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          Split <code class="bg-gray-100 px-1 rounded">js/app.js</code> into three deep modules, each with a small interface and deep implementation:
+        </p>
+        <ul class="text-sm text-gray-700 mt-2 space-y-1 list-disc list-inside">
+          <li><code class="bg-gray-100 px-1 rounded">js/filters.js</code> — <strong>Filters module</strong>: interface <code class="bg-gray-100 px-1 rounded">filter( repos, { period, search, language, sortBy } )</code>. Pure function. Zero DOM dependency.</li>
+          <li><code class="bg-gray-100 px-1 rounded">js/renderer.js</code> — <strong>Renderer module</strong>: interface <code class="bg-gray-100 px-1 rounded">render(container, repos, hasSearch)</code>. Accepts DOM element as parameter, not closure.</li>
+          <li><code class="bg-gray-100 px-1 rounded">js/app.js</code> — <strong>Orchestrator</strong>: wires modules together, binds events, manages state. Thin adapter layer.</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Benefits</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li><strong>Leverage</strong>: <code class="bg-gray-100 px-1 rounded">filter()</code> exercises all filtering/sorting logic through one method. One test covers search, language filter, and sort.</li>
+          <li><strong>Locality</strong>: A bug in sort order lives entirely in <code class="bg-gray-100 px-1 rounded">filters.js</code>. A bug in card rendering lives entirely in <code class="bg-gray-100 px-1 rounded">renderer.js</code>.</li>
+          <li><strong>Testability</strong>: <code class="bg-gray-100 px-1 rounded">filter()</code> is a pure function — testable without JSDOM. <code class="bg-gray-100 px-1 rounded">render()</code> accepts a container element — testable with a minimal JSDOM setup.</li>
+          <li><strong>Depth</strong>: The Filters module has one method but complex logic behind it. The Renderer module has one method but complex HTML generation behind it.</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Before / After</h3>
+        <div class="before-after">
+          <div class="before">
+            <h4 class="text-sm font-semibold text-red-800 mb-3">Before: One monolithic module</h4>
+            <pre class="text-xs text-red-900 font-mono mt-2">
+┌─────────────────────────────────┐
+│           app.js                │
+│  (168 lines, 0 exports)         │
+│                                 │
+│  LANGUAGE_COLORS                │
+│  trendingData, currentPeriod    │
+│  loadTrendingData()             │
+│  populateLanguageFilter()       │
+│  applyFilters()                 │
+│    ├─ get repos from period     │
+│    ├─ filter by search          │
+│    ├─ filter by language        │
+│    ├─ sort                      │
+│    ├─ mutate filteredRepos      │
+│    └─ call renderRepos()        │
+│  renderRepos()                  │
+│    └─ reads searchInput from    │
+│       closure (untestable)      │
+│  Event listeners (5)            │
+│    └─ all call applyFilters()   │
+└─────────────────────────────────┘
+            </pre>
+          </div>
+          <div class="after">
+            <h4 class="text-sm font-semibold text-green-800 mb-3">After: Three deep modules at clean seams</h4>
+            <pre class="text-xs text-green-900 font-mono mt-2">
+┌──────────────┐  ┌─────────────┐  ┌──────────────┐
+│  filters.js  │  │ renderer.js │  │   app.js     │
+│              │  │             │  │              │
+│ filter()     │←─┤ render()    │  │ state mgmt   │
+│ (pure func)  │  │ (accepts    │  │ event bind   │
+│              │  │  container) │  │ adapter      │
+│ 1 interface  │  │ 1 interface │  │ (thin)       │
+│ deep impl    │  │ deep impl   │  │              │
+│              │  │             │  │              │
+│ Testable     │  │ JSDOM-test  │  │ Simple       │
+│ without DOM  │  │ able        │  │ to test      │
+└──────────────┘  └─────────────┘  └──────────────┘
+     ▲                   ▲                ▲
+     │                   │                │
+     └───────────────────┴────────────────┘
+              Clean seams, small interfaces
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate 2 -->
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-gray-900">2. Deepen the scraper — export and test <code>scrapeTrending</code></h2>
+        <span class="badge badge-strong">Strong</span>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Files</h3>
+        <code class="text-sm bg-gray-100 px-2 py-1 rounded">scripts/scrape-trending.js</code>
+        <p class="text-sm text-gray-600 mt-2">The <code>scrapeTrending(url)</code> function is internal — not exported, not tested</p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Problem</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <code class="bg-gray-100 px-1 rounded">scrapeTrending</code> is the actual scraping logic: HTTP fetch + cheerio parsing + repo extraction. It is not exported, so tests must go through <code class="bg-gray-100 px-1 rounded">main()</code> which writes to disk, or mock <code class="bg-gray-100 px-1 rounded">axios.get</code>. The function does too much through its implicit interface.
+        </p>
+        <p class="text-gray-700 text-sm leading-relaxed mt-2">
+          The scraper's real seam is <strong>URL → repo array</strong>. Currently hidden inside <code class="bg-gray-100 px-1 rounded">scrapeTrending</code>. By exporting it and making it accept a URL string and return a repo array, we create a testable interface. The HTTP dependency becomes an adapter concern.
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Solution</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li>Export <code class="bg-gray-100 px-1 rounded">scrapeTrending(url)</code> as the scraper's public interface</li>
+          <li>Inject <code class="bg-gray-100 px-1 rounded">axios</code> as a dependency (accept it as a parameter or use dependency injection)</li>
+          <li>Write tests that pass a mock axios and verify the parsed repo output</li>
+          <li>Keep <code class="bg-gray-100 px-1 rounded">main()</code> as the thin adapter that wires axios to <code class="bg-gray-100 px-1 rounded">scrapeTrending</code> and handles file I/O</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Benefits</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li><strong>Depth</strong>: The scraper module now has one exported function with complex logic behind it (fetch + parse + extract)</li>
+          <li><strong>Locality</strong>: Changes to the cheerio selectors live in one place. Changes to the HTTP layer live in one place.</li>
+          <li><strong>Testability</strong>: Tests can mock axios and verify the scraping pipeline end-to-end without hitting GitHub</li>
+          <li><strong>Deletion test</strong>: Deleting <code class="bg-gray-100 px-1 rounded">scrapeTrending</code> would spread fetch+parse logic across <code class="bg-gray-100 px-1 rounded">main()</code> — it earns its keep</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Before / After</h3>
+        <div class="before-after">
+          <div class="before">
+            <h4 class="text-sm font-semibold text-red-800 mb-3">Before: Hidden seam, untestable</h4>
+            <pre class="text-xs text-red-900 font-mono mt-2">
+┌─────────────────────────────────┐
+│ scrape-trending.js              │
+│                                 │
+│  main()                         │
+│    ├─ loop TIME_FILTERS         │
+│    ├─ scrapeTrending(url)       │
+│    │    ├─ axios.get(url)       │
+│    │    ├─ cheerio.load(html)   │
+│    │    └─ extractRepoFromRow() │
+│    ├─ fs.writeFileSync()        │
+│    └─ (error → empty repos)     │
+│                                 │
+│  scrapeTrending()  [internal]   │
+│  extractRepoFromRow() [exported]│
+│  parseStars() [exported]        │
+│  getTrendingUrl() [exported]    │
+│  TIME_FILTERS [exported]        │
+│                                 │
+│  scrapeTrending cannot be       │
+│  tested without mocking axios   │
+│  or going through main()        │
+└─────────────────────────────────┘
+            </pre>
+          </div>
+          <div class="after">
+            <h4 class="text-sm font-semibold text-green-800 mb-3">After: Clear seam, testable through interface</h4>
+            <pre class="text-xs text-green-900 font-mono mt-2">
+┌───────────────────────────────────────────┐
+│ scrape-trending.js                        │
+│                                           │
+│  main(axios, fs) [adapter, thin]          │
+│    ├─ loop TIME_FILTERS                   │
+│    ├─ scrapeTrending(url, axios)          │
+│    │    ├─ axios.get(url)                  │
+│    │    └─ cheerio + extractRepoFromRow()  │
+│    └─ fs.writeFileSync()                  │
+│                                           │
+│  scrapeTrending(url, axios) [exported]    │
+│    ← seam: URL + axios → repo[]           │
+│    ← testable: mock axios, verify output  │
+│                                           │
+│  extractRepoFromRow() [exported]          │
+│  parseStars() [exported]                  │
+│  getTrendingUrl() [exported]              │
+│  TIME_FILTERS [exported]                  │
+│                                           │
+│  One exported function. One seam.         │
+│  Tests cross the interface, not internals │
+└───────────────────────────────────────────┘
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate 3 -->
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-gray-900">3. Create a shared formatting module</h2>
+        <span class="badge badge-exploring">Worth exploring</span>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Files</h3>
+        <code class="text-sm bg-gray-100 px-2 py-1 rounded">scripts/scrape-trending.js</code> (<code>parseStars</code>) &middot; <code class="bg-gray-100 px-2 py-1 rounded">js/app.js</code> (<code>formatStars</code>)
+        <p class="text-sm text-gray-600 mt-2">Inverse operations with no shared module — <code>parseStars</code> converts string to number, <code>formatStars</code> converts number to string</p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Problem</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          The scraper has <code class="bg-gray-100 px-1 rounded">parseStars("12.5k") -> 12500</code>. The frontend has <code class="bg-gray-100 px-1 rounded">formatStars(12500) -> "12.5k"</code>. These are inverse operations operating on the same domain concept — star count formatting — but they live in separate files with separate implementations. If the formatting rules change (e.g., adding million display support), both must be updated independently.
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Solution</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li>Create <code class="bg-gray-100 px-1 rounded">shared/format.js</code> with a <strong>Format module</strong>: <code class="bg-gray-100 px-1 rounded">formatStars(number)</code> and <code class="bg-gray-100 px-1 rounded">parseStars(string)</code></li>
+          <li>Both the scraper (Node.js) and frontend can import from the same module</li>
+          <li>The Format module becomes a deep module with one interface surface and all star formatting logic behind it</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Benefits</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li><strong>Leverage</strong>: One module, one test suite, covers both directions of star formatting</li>
+          <li><strong>Locality</strong>: A new format rule (e.g., "show millions as 1.2M") lives in one file</li>
+          <li><strong>Consistency</strong>: The scraper and frontend always use identical formatting rules</li>
+          <li><strong>Depth</strong>: One interface (<code>formatStars</code>, <code>parseStars</code>) with all formatting logic concentrated inside</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Before / After</h3>
+        <div class="before-after">
+          <div class="before">
+            <h4 class="text-sm font-semibold text-red-800 mb-3">Before: Duplication across files</h4>
+            <pre class="text-xs text-red-900 font-mono mt-2">
+scraper:                    frontend:
+parseStars("12.5k")         formatStars(12500)
+  → 12500                     → "12.5k"
+  [separate impl]             [separate impl]
+  [separate tests]            [no tests]
+            </pre>
+          </div>
+          <div class="after">
+            <h4 class="text-sm font-semibold text-green-800 mb-3">After: One deep module, shared by both</h4>
+            <pre class="text-xs text-green-900 font-mono mt-2">
+┌─────────────────────────────────┐
+│ shared/format.js                │
+│                                 │
+│ Format module                   │
+│                                 │
+│ parseStars(string) → number     │
+│ formatStars(number) → string    │
+│                                 │
+│ One interface, one test suite   │
+│ Both scraper and frontend use   │
+│ identical rules                 │
+└─────────────────────────────────┘
+     ▲                    ▲
+     │                    │
+  scraper            frontend
+            </pre>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Candidate 4 -->
+    <div class="card">
+      <div class="flex items-center justify-between mb-4">
+        <h2 class="text-xl font-bold text-gray-900">4. Deepen language color mapping</h2>
+        <span class="badge badge-exploring">Worth exploring</span>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Files</h3>
+        <code class="text-sm bg-gray-100 px-2 py-1 rounded">js/app.js</code> (<code>LANGUAGE_COLORS</code> + <code>getLanguageColor</code>)
+        <p class="text-sm text-gray-600 mt-2">19-line constant + 2-line function, both shallow, both only used in rendering</p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Problem</h3>
+        <p class="text-gray-700 text-sm leading-relaxed">
+          <code class="bg-gray-100 px-1 rounded">LANGUAGE_COLORS</code> is a 19-line lookup object. <code class="bg-gray-100 px-1 rounded">getLanguageColor</code> is a 2-line function. Together they form a shallow module — interface complexity equals implementation complexity. They are embedded in <code class="bg-gray-100 px-1 rounded">app.js</code> and only used by <code class="bg-gray-100 px-1 rounded">renderRepos</code>.
+        </p>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Solution</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li>Extract to <code class="bg-gray-100 px-1 rounded">shared/colors.js</code> — a deep module with interface <code class="bg-gray-100 px-1 rounded">getLanguageColor(language)</code></li>
+          <li>Move <code>LANGUAGE_COLORS</code> inside the module's implementation</li>
+          <li>When <code class="bg-gray-100 px-1 rounded">app.js</code> is split (Candidate 1), this becomes the Renderer module's internal color concern, not a global constant</li>
+        </ul>
+      </div>
+
+      <div class="mb-4">
+        <h3 class="section-title">Benefits</h3>
+        <ul class="text-sm text-gray-700 space-y-1 list-disc list-inside">
+          <li><strong>Locality</strong>: Adding a new language color lives in one file</li>
+          <li><strong>Depth</strong>: The colors module has one method. If a fallback strategy or default color system is added later, the interface stays the same</li>
+          <li><strong>Clean seam</strong>: The Renderer module imports <code class="bg-gray-100 px-1 rounded">getLanguageColor</code> through a clean interface rather than inlining the color map</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Top Recommendation -->
+    <div class="card border-2 border-green-200 bg-green-50">
+      <h2 class="text-xl font-bold text-green-900 mb-4">Top Recommendation</h2>
+      <p class="text-gray-800 text-sm leading-relaxed">
+        <strong>Tackle Candidate 1 first</strong> — extract the frontend into deep modules. This is the highest-leverage change because:
+      </p>
+      <ul class="text-sm text-gray-700 mt-2 space-y-1 list-disc list-inside">
+        <li>It creates the <strong>seams</strong> needed to test the largest untested area (<code class="bg-gray-100 px-1 rounded">js/app.js</code>)</li>
+        <li>It naturally absorbs Candidates 3 and 4 — the <code class="bg-gray-100 px-1 rounded">formatStars</code> and <code class="bg-gray-100 px-1 rounded">getLanguageColor</code> functions become internal to the new modules</li>
+        <li>It produces <strong>immediate testability gains</strong>: the Filters module can be tested as a pure function without JSDOM</li>
+        <li>Candidate 2 (scraper deepening) can wait — the scraper already has decent test coverage through its exported functions</li>
+      </ul>
+      <p class="text-gray-800 text-sm leading-relaxed mt-3">
+        After Candidate 1 is done, the codebase will have clear seams between filtering, rendering, and orchestration. Each module will have a small interface and deep implementation. Tests will be natural to write because they cross clean interfaces rather than reaching into closure variables.
+      </p>
+    </div>
+
+  </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', async function() {
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-before1') });
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-after1') });
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-before2') });
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-after2') });
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-before3') });
+      await mermaid.run({ nodes: document.querySelectorAll('#mermaid-after3') });
+    });
+  </script>
+</body>
+</html>

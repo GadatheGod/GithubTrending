@@ -1,6 +1,3 @@
-const { filter } = require('./filters');
-const { render } = require('./renderer');
-
 let trendingData = null;
 let currentPeriod = 'today';
 
@@ -58,8 +55,8 @@ function update() {
   const language = languageFilter.value;
   const sortBy = sortSelect.value;
 
-  const filtered = filter(repos, { search, language, sortBy });
-  render(repoListEl, noResultsEl, filtered, !!search);
+  const filtered = window.filters.filter(repos, { search, language, sortBy });
+  window.renderer.render(repoListEl, noResultsEl, filtered, !!search);
 }
 
 filterBtns.forEach(btn => {
