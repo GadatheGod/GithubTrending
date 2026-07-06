@@ -18,7 +18,8 @@ function extractRepoFromRow($row, index = 0) {
   if (!fullName) return null;
 
   const description = $row.find('p').text().trim() || null;
-  const starsStr = $row.find('a.d-block.link-color-fg-muted').first().text().trim().replace(/\s/g, '');
+  const starsLink = $row.find('a[href$="/stargazers"]').first();
+  const starsStr = starsLink.text().trim().replace(/\s/g, '');
   const language = $row.find('span[itemprop="programmingLanguage"]').first().text().trim() || 'Unknown';
   const currentUrl = $row.find('h2 a').attr('href')?.replace(/^\/|\/$/g, '');
 
