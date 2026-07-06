@@ -1,33 +1,23 @@
 let trendingData = null;
 let currentPeriod = 'today';
 
-const container = document;
-const repoListEl = document.getElementById('repoList');
-const loadingEl = document.getElementById('loading');
-const errorEl = document.getElementById('error');
-const noResultsEl = document.getElementById('noResults');
+const feedContainer = document.getElementById('feedContainer');
 const searchInput = document.getElementById('searchInput');
 const languageFilter = document.getElementById('languageFilter');
-const sortSelect = document.getElementById('sortSelect');
-const filterBtns = document.querySelectorAll('.filter-btn');
+const refreshBtn = document.getElementById('refreshBtn');
+const timeLinks = document.querySelectorAll('.time-link');
 
 async function loadTrendingData() {
-  loadingEl.style.display = 'block';
-  repoListEl.style.display = 'none';
-  errorEl.style.display = 'none';
-  noResultsEl.style.display = 'none';
+  feedContainer.innerHTML = '<div class="loading-state"><i class="fas fa-spinner fa-spin"></i><p>Loading trending repositories...</p></div>';
 
   try {
     const response = await fetch('data/trending.json');
     if (!response.ok) throw new Error(`Failed to load data: ${response.status}`);
     trendingData = await response.json();
-    loadingEl.style.display = 'none';
     populateLanguageFilter();
     update();
   } catch (err) {
-    loadingEl.style.display = 'none';
-    errorEl.style.display = 'block';
-    errorEl.textContent = `Failed to load trending data. Please try again later. (${err.message})`;
+    feedContainer.innerHTML = `<div class="loading-state"><i class="fas fa-exclamation-circle"></i><p>Failed to load trending data. Please try again later.</p></div>`;
   }
 }
 
@@ -53,20 +43,19 @@ function update() {
   const repos = trendingData[currentPeriod]?.repos || [];
   const search = searchInput.value;
   const language = languageFilter.value;
-  const sortBy = sortSelect.value;
 
-  const filtered = window.filters.filter(repos, { search, language, sortBy });
-  window.renderer.render(repoListEl, noResultsEl, filtered, !!search);
+  const filtered = window.filters.filter(repos, { search, language, sortBy: 'rank' });
+  window.renderer.render(feedContainer, feedContainer, filtered, !!search);
 }
 
-filterBtns.forEach(btn => {
-  btn.addEventListener('click', () => {
-    filterBtns.forEach(b => b.classList.remove('active'));
-    btn.classList.add('active');
-    currentPeriod = btn.dataset.period;
+timeLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault();
+    timeLinks.forEach(l => l.classList.remove('active'));
+    link.classList.add('active');
+    currentPeriod = link.dataset.period;
     searchInput.value = '';
     languageFilter.value = '';
-    sortSelect.value = 'rank';
     update();
   });
 });
@@ -79,8 +68,11 @@ languageFilter.addEventListener('change', () => {
   update();
 });
 
-sortSelect.addEventListener('change', () => {
-  update();
+refreshBtn.addEventListener('click', () => {
+  refreshBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i>';
+  setTimeout(() => {
+    loadTrendingData();
+  }, 400);
 });
 
 loadTrendingData();
