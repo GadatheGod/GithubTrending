@@ -12,6 +12,12 @@ function render(repoListEl, feedContainer, repos, hasSearch, loadingEl) {
   repos.forEach((repo, index) => {
     const item = document.createElement('div');
     item.className = 'feed-item';
+    item.style.display = 'flex';
+    item.style.flexDirection = 'row';
+    item.style.alignItems = 'flex-start';
+    item.style.padding = '10px 20px';
+    item.style.borderBottom = '1px solid #eaeaea';
+    item.style.gap = '12px';
 
     const rankDiv = document.createElement('div');
     rankDiv.className = 'rank';
