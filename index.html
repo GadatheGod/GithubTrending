@@ -3,19 +3,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>GitHub Trending</title>
+    <title>GitHub Trending · Hacker News Style</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
+
+        <!-- ─── HEADER ─── -->
         <header class="header">
             <div class="header-left">
                 <div class="logo">
                     <i class="fab fa-github"></i> Trending
                 </div>
                 <nav class="header-nav">
-                    <a href="#" class="time-link active" data-period="today">Today</a>
+                    <a href="#" class="time-link" data-period="today">Today</a>
                     <span>·</span>
                     <a href="#" class="time-link" data-period="weekly">Week</a>
                     <span>·</span>
@@ -31,28 +33,19 @@
                     <option value="">All Languages</option>
                 </select>
                 <button class="refresh-btn" id="refreshBtn">
-                    <i class="fas fa-sync-alt"></i>
+                    <i class="fas fa-sync-alt"></i> Refresh
                 </button>
             </div>
         </header>
 
-        <div class="feed" id="feedContainer">
-            <div class="loading-state">
-                <i class="fas fa-spinner fa-spin"></i>
-                <p>Loading trending repositories...</p>
-            </div>
-        </div>
+        <!-- ─── FEED ─── -->
+        <div class="feed" id="feedContainer"></div>
+
+        <p style="margin-top: 16px; font-size: 0.8rem; color: #888; text-align: center;">
+            <i class="fas fa-chevron-down"></i> Click <strong>▼</strong> on any row to expand details
+        </p>
     </div>
 
-<script>
-    document.querySelectorAll('link[rel="stylesheet"]').forEach(link => {
-      if (link.href.includes('style.css')) {
-        link.href += '?v=' + Date.now();
-      }
-    });
-  </script>
-  <script src="js/filters.js"></script>
-  <script src="js/renderer.js"></script>
-  <script src="js/app.js"></script>
+    <script src="js/app.js"></script>
 </body>
 </html>
