@@ -1,496 +1,559 @@
 {
   "today": {
     "period": "Today",
-    "scrapedAt": "2026-07-16T09:57:58.324Z",
+    "scrapedAt": "2026-07-17T09:47:47.083Z",
     "repos": [
       {
         "rank": 1,
-        "name": "OpenCut-app/OpenCut",
-        "url": "https://github.com/OpenCut-app/OpenCut",
-        "description": "The open-source CapCut alternative",
-        "stars": 73262,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:58.318Z"
+        "name": "apache/ossie",
+        "url": "https://github.com/apache/ossie",
+        "description": "Apache Ossie, industry wide specification effort to standardize how we exchange semantic metadata across analytics, AI and BI platforms, providing a vendor neutral, single source of truth for semantic data",
+        "stars": 1096,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:47.070Z"
       },
       {
         "rank": 2,
         "name": "Nutlope/hallmark",
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-        "stars": 9925,
+        "stars": 11513,
         "language": "CSS",
-        "scrapeTime": "2026-07-16T09:57:58.320Z"
+        "scrapeTime": "2026-07-17T09:47:47.072Z"
       },
       {
         "rank": 3,
-        "name": "mattpocock/skills",
-        "url": "https://github.com/mattpocock/skills",
-        "description": "Skills for Real Engineers. Straight from my .claude directory.",
-        "stars": 173296,
-        "language": "Shell",
-        "scrapeTime": "2026-07-16T09:57:58.320Z"
+        "name": "OpenCut-app/OpenCut",
+        "url": "https://github.com/OpenCut-app/OpenCut",
+        "description": "The open-source CapCut alternative",
+        "stars": 74482,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:47.072Z"
       },
       {
         "rank": 4,
-        "name": "moeru-ai/airi",
-        "url": "https://github.com/moeru-ai/airi",
-        "description": "💖🧸 Self hosted, you-owned Grok Companion, a container of souls of waifu, cyber livings to bring them into our worlds, wishing to achieve Neuro-sama's altitude. Capable of realtime voice chat, Minecraft, Factorio playing. Web / macOS / Windows supported.",
-        "stars": 42719,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:58.321Z"
+        "name": "PostHog/posthog",
+        "url": "https://github.com/PostHog/posthog",
+        "description": "🦔 PostHog is the leading platform for building self-driving products. Our developer tools – AI observability, analytics, session replay, flags, experiments, error tracking, logs, and more – capture all the context agents need to diagnose problems, uncover opportunities, and ship fixes. Steer it all from Slack, web, desktop, or the MCP.",
+        "stars": 36009,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:47.073Z"
       },
       {
         "rank": 5,
-        "name": "Dicklesworthstone/destructive_command_guard",
-        "url": "https://github.com/Dicklesworthstone/destructive_command_guard",
-        "description": "The Destructive Command Guard (dcg) is for blocking dangerous git and shell commands from being executed by agents.",
-        "stars": 4945,
+        "name": "openinterpreter/openinterpreter",
+        "url": "https://github.com/openinterpreter/openinterpreter",
+        "description": "A coding agent for open models like Kimi K3",
+        "stars": 66177,
         "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:58.321Z"
+        "scrapeTime": "2026-07-17T09:47:47.074Z"
       },
       {
         "rank": 6,
-        "name": "HKUDS/Vibe-Trading",
-        "url": "https://github.com/HKUDS/Vibe-Trading",
-        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
-        "stars": 24078,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:58.322Z"
+        "name": "PrismML-Eng/Bonsai-demo",
+        "url": "https://github.com/PrismML-Eng/Bonsai-demo",
+        "description": "Bonsai Demo",
+        "stars": 1632,
+        "language": "Shell",
+        "scrapeTime": "2026-07-17T09:47:47.074Z"
       },
       {
         "rank": 7,
-        "name": "openinterpreter/openinterpreter",
-        "url": "https://github.com/openinterpreter/openinterpreter",
-        "description": "A coding agent for low-cost models",
-        "stars": 65736,
-        "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:58.322Z"
-      },
-      {
-        "rank": 8,
-        "name": "HKUDS/DeepTutor",
-        "url": "https://github.com/HKUDS/DeepTutor",
-        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
-        "stars": 26594,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:58.322Z"
-      },
-      {
-        "rank": 9,
-        "name": "HenryNdubuaku/maths-cs-ai-compendium",
-        "url": "https://github.com/HenryNdubuaku/maths-cs-ai-compendium",
-        "description": "Become a cracked AI/ML Research Engineer",
-        "stars": 6156,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:58.323Z"
-      },
-      {
-        "rank": 10,
-        "name": "Shubhamsaboo/awesome-llm-apps",
-        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-        "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
-        "stars": 122328,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:58.323Z"
-      },
-      {
-        "rank": 11,
-        "name": "coreyhaines31/marketingskills",
-        "url": "https://github.com/coreyhaines31/marketingskills",
-        "description": "Marketing skills for Claude Code and AI agents. CRO, copywriting, SEO, analytics, and growth engineering.",
-        "stars": 40058,
-        "language": "JavaScript",
-        "scrapeTime": "2026-07-16T09:57:58.323Z"
-      },
-      {
-        "rank": 12,
-        "name": "YimMenu/YimMenuV2",
-        "url": "https://github.com/YimMenu/YimMenuV2",
-        "description": "Experimental menu for GTA 5: Enhanced",
-        "stars": 1474,
-        "language": "C++",
-        "scrapeTime": "2026-07-16T09:57:58.324Z"
-      },
-      {
-        "rank": 13,
         "name": "hasaneyldrm/exercises-dataset",
         "url": "https://github.com/hasaneyldrm/exercises-dataset",
         "description": "1,324-exercise fitness dataset — animation GIFs, 180×180 thumbnails, muscle-group & equipment data, and step-by-step instructions in 6 languages. The exercise data layer behind the LogPress app.",
-        "stars": 14660,
+        "stars": 15282,
         "language": "HTML",
-        "scrapeTime": "2026-07-16T09:57:58.324Z"
+        "scrapeTime": "2026-07-17T09:47:47.074Z"
+      },
+      {
+        "rank": 8,
+        "name": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+        "stars": 123320,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:47.075Z"
+      },
+      {
+        "rank": 9,
+        "name": "lobehub/lobehub",
+        "url": "https://github.com/lobehub/lobehub",
+        "description": "🤯 LobeHub is your Chief Agent Operator, organizing your agents into 7×24 operations by hiring, scheduling, and reporting on your entire AI team.",
+        "stars": 80377,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:47.075Z"
+      },
+      {
+        "rank": 10,
+        "name": "YimMenu/YimMenuV2",
+        "url": "https://github.com/YimMenu/YimMenuV2",
+        "description": "Experimental menu for GTA 5: Enhanced",
+        "stars": 1537,
+        "language": "C++",
+        "scrapeTime": "2026-07-17T09:47:47.075Z"
+      },
+      {
+        "rank": 11,
+        "name": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+        "stars": 27132,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:47.075Z"
+      },
+      {
+        "rank": 12,
+        "name": "mattpocock/skills",
+        "url": "https://github.com/mattpocock/skills",
+        "description": "Skills for Real Engineers. Straight from my .claude directory.",
+        "stars": 175011,
+        "language": "Shell",
+        "scrapeTime": "2026-07-17T09:47:47.076Z"
+      },
+      {
+        "rank": 13,
+        "name": "github/copilot-sdk",
+        "url": "https://github.com/github/copilot-sdk",
+        "description": "Multi-platform SDK for integrating GitHub Copilot Agent into apps and services",
+        "stars": 9737,
+        "language": "Java",
+        "scrapeTime": "2026-07-17T09:47:47.082Z"
+      },
+      {
+        "rank": 14,
+        "name": "ibelick/ui-skills",
+        "url": "https://github.com/ibelick/ui-skills",
+        "description": "Skills for Design Engineers",
+        "stars": 4549,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:47.082Z"
+      },
+      {
+        "rank": 15,
+        "name": "Graphify-Labs/graphify",
+        "url": "https://github.com/Graphify-Labs/graphify",
+        "description": "AI coding assistant skill (Claude Code, Codex, OpenCode, Cursor, Gemini CLI, and more). Turn any folder of code, SQL schemas, R scripts, shell scripts, docs, papers, images, or videos into a queryable knowledge graph. App code + database schema + infrastructure in one graph.",
+        "stars": 89629,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:47.083Z"
+      },
+      {
+        "rank": 16,
+        "name": "codecrafters-io/build-your-own-x",
+        "url": "https://github.com/codecrafters-io/build-your-own-x",
+        "description": "Master programming by recreating your favorite technologies from scratch.",
+        "stars": 526729,
+        "language": "Markdown",
+        "scrapeTime": "2026-07-17T09:47:47.083Z"
+      },
+      {
+        "rank": 17,
+        "name": "ossu/computer-science",
+        "url": "https://github.com/ossu/computer-science",
+        "description": "🎓 Path to a free self-taught education in Computer Science!",
+        "stars": 206783,
+        "language": "HTML",
+        "scrapeTime": "2026-07-17T09:47:47.083Z"
       }
     ]
   },
   "weekly": {
     "period": "Weekly",
-    "scrapedAt": "2026-07-16T09:57:59.485Z",
+    "scrapedAt": "2026-07-17T09:47:48.189Z",
     "repos": [
       {
         "rank": 1,
-        "name": "wonderwhy-er/DesktopCommanderMCP",
-        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-        "stars": 8385,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.481Z"
-      },
-      {
-        "rank": 2,
         "name": "google-labs-code/stitch-skills",
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "stars": 7506,
+        "stars": 7577,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.481Z"
+        "scrapeTime": "2026-07-17T09:47:48.185Z"
+      },
+      {
+        "rank": 2,
+        "name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "stars": 8423,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:48.185Z"
       },
       {
         "rank": 3,
         "name": "abseil/abseil-cpp",
         "url": "https://github.com/abseil/abseil-cpp",
         "description": "Abseil Common Libraries (C++)",
-        "stars": 18016,
+        "stars": 17955,
         "language": "C++",
-        "scrapeTime": "2026-07-16T09:57:59.481Z"
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
         "rank": 4,
-        "name": "iOfficeAI/OfficeCLI",
-        "url": "https://github.com/iOfficeAI/OfficeCLI",
-        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
-        "stars": 18101,
-        "language": "C#",
-        "scrapeTime": "2026-07-16T09:57:59.482Z"
+        "name": "Nutlope/hallmark",
+        "url": "https://github.com/Nutlope/hallmark",
+        "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
+        "stars": 11513,
+        "language": "CSS",
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
         "rank": 5,
-        "name": "stablyai/orca",
-        "url": "https://github.com/stablyai/orca",
-        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-        "stars": 20292,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.482Z"
+        "name": "HKUDS/Vibe-Trading",
+        "url": "https://github.com/HKUDS/Vibe-Trading",
+        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
+        "stars": 24474,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
         "rank": 6,
         "name": "chriskohlhoff/asio",
         "url": "https://github.com/chriskohlhoff/asio",
         "description": "Asio C++ Library",
-        "stars": 6196,
+        "stars": 6099,
         "language": "C++",
-        "scrapeTime": "2026-07-16T09:57:59.482Z"
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
         "rank": 7,
-        "name": "HKUDS/Vibe-Trading",
-        "url": "https://github.com/HKUDS/Vibe-Trading",
-        "description": "\"Vibe-Trading: Your Personal Trading Agent\"",
-        "stars": 24078,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:59.482Z"
+        "name": "stablyai/orca",
+        "url": "https://github.com/stablyai/orca",
+        "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
+        "stars": 20859,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
         "rank": 8,
-        "name": "Nutlope/hallmark",
-        "url": "https://github.com/Nutlope/hallmark",
-        "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-        "stars": 9925,
-        "language": "CSS",
-        "scrapeTime": "2026-07-16T09:57:59.482Z"
-      },
-      {
-        "rank": 9,
         "name": "oven-sh/bun",
         "url": "https://github.com/oven-sh/bun",
         "description": "Incredibly fast JavaScript runtime, bundler, test runner, and package manager – all in one",
-        "stars": 94823,
+        "stars": 94769,
         "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
+        "scrapeTime": "2026-07-17T09:47:48.186Z"
       },
       {
-        "rank": 10,
-        "name": "openai/codex-plugin-cc",
-        "url": "https://github.com/openai/codex-plugin-cc",
-        "description": "Use Codex from Claude Code to review code or delegate tasks.",
-        "stars": 28901,
-        "language": "JavaScript",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
-      },
-      {
-        "rank": 11,
-        "name": "diegosouzapw/OmniRoute",
-        "url": "https://github.com/diegosouzapw/OmniRoute",
-        "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
-        "stars": 17906,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
-      },
-      {
-        "rank": 12,
-        "name": "ogulcancelik/herdr",
-        "url": "https://github.com/ogulcancelik/herdr",
-        "description": "agent multiplexer that lives in your terminal.",
-        "stars": 17016,
-        "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
-      },
-      {
-        "rank": 13,
-        "name": "TencentCloud/CubeSandbox",
-        "url": "https://github.com/TencentCloud/CubeSandbox",
-        "description": "Instant, Concurrent, Secure & Lightweight Sandbox for AI Agents.",
-        "stars": 10346,
-        "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
-      },
-      {
-        "rank": 14,
-        "name": "Shubhamsaboo/awesome-llm-apps",
-        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
-        "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
-        "stars": 122328,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:59.483Z"
-      },
-      {
-        "rank": 15,
-        "name": "pbakaus/impeccable",
-        "url": "https://github.com/pbakaus/impeccable",
-        "description": "The design language that makes your AI harness better at design.",
-        "stars": 47186,
-        "language": "JavaScript",
-        "scrapeTime": "2026-07-16T09:57:59.484Z"
-      },
-      {
-        "rank": 16,
+        "rank": 9,
         "name": "OpenCut-app/OpenCut",
         "url": "https://github.com/OpenCut-app/OpenCut",
         "description": "The open-source CapCut alternative",
-        "stars": 73262,
+        "stars": 74482,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.484Z"
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
       },
       {
-        "rank": 17,
+        "rank": 10,
+        "name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "stars": 23340,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
+      },
+      {
+        "rank": 11,
+        "name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "stars": 18631,
+        "language": "C#",
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
+      },
+      {
+        "rank": 12,
+        "name": "Shubhamsaboo/awesome-llm-apps",
+        "url": "https://github.com/Shubhamsaboo/awesome-llm-apps",
+        "description": "100+ AI Agent & RAG apps you can actually run — clone, customize, ship.",
+        "stars": 123320,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
+      },
+      {
+        "rank": 13,
+        "name": "openai/codex-plugin-cc",
+        "url": "https://github.com/openai/codex-plugin-cc",
+        "description": "Use Codex from Claude Code to review code or delegate tasks.",
+        "stars": 29015,
+        "language": "JavaScript",
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
+      },
+      {
+        "rank": 14,
+        "name": "diegosouzapw/OmniRoute",
+        "url": "https://github.com/diegosouzapw/OmniRoute",
+        "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
+        "stars": 18192,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:48.187Z"
+      },
+      {
+        "rank": 15,
         "name": "davila7/claude-code-templates",
         "url": "https://github.com/davila7/claude-code-templates",
         "description": "CLI tool for configuring and monitoring Claude Code",
-        "stars": 29592,
+        "stars": 29634,
         "language": "Python",
-        "scrapeTime": "2026-07-16T09:57:59.484Z"
+        "scrapeTime": "2026-07-17T09:47:48.188Z"
+      },
+      {
+        "rank": 16,
+        "name": "pbakaus/impeccable",
+        "url": "https://github.com/pbakaus/impeccable",
+        "description": "The design language that makes your AI harness better at design.",
+        "stars": 47464,
+        "language": "JavaScript",
+        "scrapeTime": "2026-07-17T09:47:48.188Z"
+      },
+      {
+        "rank": 17,
+        "name": "kangarooking/cangjie-skill",
+        "url": "https://github.com/kangarooking/cangjie-skill",
+        "description": "把书、长视频、播客等高价值内容蒸馏成可执行的 Agent Skills",
+        "stars": 3427,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:48.188Z"
       },
       {
         "rank": 18,
-        "name": "anthropics/claude-cookbooks",
-        "url": "https://github.com/anthropics/claude-cookbooks",
-        "description": "A collection of notebooks/recipes showcasing some fun and effective ways of using Claude.",
-        "stars": 49008,
-        "language": "Jupyter Notebook",
-        "scrapeTime": "2026-07-16T09:57:59.484Z"
+        "name": "ogulcancelik/herdr",
+        "url": "https://github.com/ogulcancelik/herdr",
+        "description": "agent multiplexer that lives in your terminal.",
+        "stars": 17393,
+        "language": "Rust",
+        "scrapeTime": "2026-07-17T09:47:48.188Z"
       },
       {
         "rank": 19,
-        "name": "Zackriya-Solutions/meetily",
-        "url": "https://github.com/Zackriya-Solutions/meetily",
-        "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
-        "stars": 25095,
-        "language": "Rust",
-        "scrapeTime": "2026-07-16T09:57:59.484Z"
-      },
-      {
-        "rank": 20,
         "name": "actions/checkout",
         "url": "https://github.com/actions/checkout",
         "description": "Action for checking out a repo",
-        "stars": 8530,
+        "stars": 8472,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:57:59.485Z"
+        "scrapeTime": "2026-07-17T09:47:48.188Z"
+      },
+      {
+        "rank": 20,
+        "name": "HKUDS/DeepTutor",
+        "url": "https://github.com/HKUDS/DeepTutor",
+        "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
+        "stars": 27132,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:48.189Z"
+      },
+      {
+        "rank": 21,
+        "name": "jrouwe/JoltPhysics",
+        "url": "https://github.com/jrouwe/JoltPhysics",
+        "description": "A multi core friendly rigid body physics and collision detection library. Written in C++. Suitable for games and VR applications. Used by Horizon Forbidden West and Death Stranding 2.",
+        "stars": 10956,
+        "language": "C++",
+        "scrapeTime": "2026-07-17T09:47:48.189Z"
       }
     ]
   },
   "monthly": {
     "period": "Monthly",
-    "scrapedAt": "2026-07-16T09:58:00.783Z",
+    "scrapedAt": "2026-07-17T09:47:49.271Z",
     "repos": [
       {
         "rank": 1,
         "name": "calesthio/OpenMontage",
         "url": "https://github.com/calesthio/OpenMontage",
         "description": "World's first open-source, agentic video production system. 12 pipelines, 52 tools, 500+ agent skills. Turn your AI coding assistant into a full video production studio.",
-        "stars": 39121,
+        "stars": 39392,
         "language": "Python",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "scrapeTime": "2026-07-17T09:47:49.268Z"
       },
       {
         "rank": 2,
         "name": "DeusData/codebase-memory-mcp",
         "url": "https://github.com/DeusData/codebase-memory-mcp",
         "description": "High-performance code intelligence MCP server. Indexes codebases into a persistent knowledge graph — average repo in milliseconds. 158 languages, sub-ms queries, 99% fewer tokens. Single static binary, zero dependencies.",
-        "stars": 32031,
+        "stars": 32262,
         "language": "C",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "scrapeTime": "2026-07-17T09:47:49.268Z"
       },
       {
         "rank": 3,
-        "name": "catchorg/Catch2",
-        "url": "https://github.com/catchorg/Catch2",
-        "description": "A modern, C++-native, test framework for unit-tests, TDD and BDD - using C++14, C++17 and later (C++11 support is in v2.x branch, and C++03 on the Catch1.x branch)",
-        "stars": 21304,
-        "language": "C++",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "name": "MadsLorentzen/ai-job-search",
+        "url": "https://github.com/MadsLorentzen/ai-job-search",
+        "description": "The job search that runs on your machine. AI job application framework built on Claude Code: evaluate postings, tailor CVs, write cover letters, prep interviews. Fork it and own it.",
+        "stars": 23340,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:49.268Z"
       },
       {
         "rank": 4,
         "name": "asgeirtj/system_prompts_leaks",
         "url": "https://github.com/asgeirtj/system_prompts_leaks",
         "description": "Extracted system prompts from Anthropic - Claude Fable 5, Opus 4.8, Claude Code, Claude Design. OpenAI - ChatGPT GPT-5.6, Codex GPT-5.6, GPT-5.5. Google - Gemini 3.5 Flash, 3.1 Pro, Antigravity. xAI - Grok, Cursor, Copilot, VS Code, Perplexity, and more. Updated regularly.",
-        "stars": 58241,
+        "stars": 58502,
         "language": "JavaScript",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "scrapeTime": "2026-07-17T09:47:49.268Z"
       },
       {
         "rank": 5,
         "name": "kunchenguid/no-mistakes",
         "url": "https://github.com/kunchenguid/no-mistakes",
         "description": "git push no-mistakes",
-        "stars": 6344,
+        "stars": 6367,
         "language": "Go",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "scrapeTime": "2026-07-17T09:47:49.268Z"
       },
       {
         "rank": 6,
         "name": "usestrix/strix",
         "url": "https://github.com/usestrix/strix",
         "description": "Open-source AI penetration testing tool to find and fix your app’s vulnerabilities.",
-        "stars": 41991,
+        "stars": 42130,
         "language": "Python",
-        "scrapeTime": "2026-07-16T09:58:00.780Z"
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
       },
       {
         "rank": 7,
-        "name": "Panniantong/Agent-Reach",
-        "url": "https://github.com/Panniantong/Agent-Reach",
-        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
-        "stars": 57033,
-        "language": "Python",
-        "scrapeTime": "2026-07-16T09:58:00.781Z"
-      },
-      {
-        "rank": 8,
         "name": "stablyai/orca",
         "url": "https://github.com/stablyai/orca",
         "description": "Orca is the ADE for working with a fleet of parallel agents. Run any coding agent with your own subscription. Available on desktop and mobile.",
-        "stars": 20292,
+        "stars": 20859,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:58:00.781Z"
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
       },
       {
-        "rank": 9,
+        "rank": 8,
         "name": "ogulcancelik/herdr",
         "url": "https://github.com/ogulcancelik/herdr",
         "description": "agent multiplexer that lives in your terminal.",
-        "stars": 17016,
+        "stars": 17393,
         "language": "Rust",
-        "scrapeTime": "2026-07-16T09:58:00.781Z"
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
       },
       {
-        "rank": 10,
+        "rank": 9,
         "name": "Zackriya-Solutions/meetily",
         "url": "https://github.com/Zackriya-Solutions/meetily",
         "description": "Privacy first, AI meeting assistant with 4x faster Parakeet/Whisper live transcription, speaker diarization, and Ollama summarization built on Rust. 100% local processing. no cloud required. Meetily (Meetly Ai - https://meetily.ai) is the #1 Self-hosted, Open-source Ai meeting note taker for macOS & Windows. Understand How to write meeting minutes",
-        "stars": 25095,
+        "stars": 25209,
         "language": "Rust",
-        "scrapeTime": "2026-07-16T09:58:00.781Z"
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
       },
       {
-        "rank": 11,
+        "rank": 10,
         "name": "diegosouzapw/OmniRoute",
         "url": "https://github.com/diegosouzapw/OmniRoute",
         "description": "Never stop coding. Free AI gateway: one endpoint, 231+ providers (50+ free), connect Claude Code, Codex, Cursor, Cline & Copilot to FREE Claude/GPT/Gemini. RTK+Caveman stacked compression saves 15-95% tokens, smart auto-fallback, MCP/A2A, multimodal APIs, Desktop/PWA.",
-        "stars": 17906,
+        "stars": 18192,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:58:00.781Z"
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
+      },
+      {
+        "rank": 11,
+        "name": "Panniantong/Agent-Reach",
+        "url": "https://github.com/Panniantong/Agent-Reach",
+        "description": "Give your AI agent eyes to see the entire internet. Read & search Twitter, Reddit, YouTube, GitHub, Bilibili, XiaoHongShu — one CLI, zero API fees.",
+        "stars": 57356,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:49.269Z"
       },
       {
         "rank": 12,
-        "name": "gabime/spdlog",
-        "url": "https://github.com/gabime/spdlog",
-        "description": "Fast C++ logging library.",
-        "stars": 29243,
-        "language": "C++",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
-      },
-      {
-        "rank": 13,
         "name": "alibaba/page-agent",
         "url": "https://github.com/alibaba/page-agent",
         "description": "JavaScript in-page GUI agent. Control web interfaces with natural language.",
-        "stars": 26829,
+        "stars": 26868,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
+      },
+      {
+        "rank": 13,
+        "name": "gabime/spdlog",
+        "url": "https://github.com/gabime/spdlog",
+        "description": "Fast C++ logging library.",
+        "stars": 29157,
+        "language": "C++",
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
       },
       {
         "rank": 14,
-        "name": "GoogleCloudPlatform/knowledge-catalog",
-        "url": "https://github.com/GoogleCloudPlatform/knowledge-catalog",
-        "description": "Google Cloud Knowledge Catalog Tools and Samples",
-        "stars": 7173,
-        "language": "HTML",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
-      },
-      {
-        "rank": 15,
         "name": "interviewstreet/hiring-agent",
         "url": "https://github.com/interviewstreet/hiring-agent",
         "description": "AI agent to evaluate and score resumes.",
-        "stars": 5977,
+        "stars": 5976,
         "language": "Python",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
+      },
+      {
+        "rank": 15,
+        "name": "ocornut/imgui",
+        "url": "https://github.com/ocornut/imgui",
+        "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
+        "stars": 74706,
+        "language": "C++",
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
       },
       {
         "rank": 16,
         "name": "simplex-chat/simplex-chat",
         "url": "https://github.com/simplex-chat/simplex-chat",
         "description": "SimpleX - the first messaging network operating without user identifiers of any kind - 100% private by design! iOS, Android and desktop apps 📱!",
-        "stars": 18696,
+        "stars": 18651,
         "language": "Haskell",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
       },
       {
         "rank": 17,
-        "name": "ocornut/imgui",
-        "url": "https://github.com/ocornut/imgui",
-        "description": "Dear ImGui: Bloat-free Graphical User interface for C++ with minimal dependencies",
-        "stars": 74729,
-        "language": "C++",
-        "scrapeTime": "2026-07-16T09:58:00.782Z"
-      },
-      {
-        "rank": 18,
-        "name": "wonderwhy-er/DesktopCommanderMCP",
-        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
-        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
-        "stars": 8385,
-        "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:58:00.783Z"
-      },
-      {
-        "rank": 19,
-        "name": "n0-computer/iroh",
-        "url": "https://github.com/n0-computer/iroh",
-        "description": "IP addresses break, dial keys instead. A library that adds QUIC + NAT Traversal to your apps.",
-        "stars": 11772,
-        "language": "Rust",
-        "scrapeTime": "2026-07-16T09:58:00.783Z"
-      },
-      {
-        "rank": 20,
         "name": "OpenCut-app/OpenCut",
         "url": "https://github.com/OpenCut-app/OpenCut",
         "description": "The open-source CapCut alternative",
-        "stars": 73262,
+        "stars": 74482,
         "language": "TypeScript",
-        "scrapeTime": "2026-07-16T09:58:00.783Z"
+        "scrapeTime": "2026-07-17T09:47:49.270Z"
+      },
+      {
+        "rank": 18,
+        "name": "GoogleCloudPlatform/knowledge-catalog",
+        "url": "https://github.com/GoogleCloudPlatform/knowledge-catalog",
+        "description": "Google Cloud Knowledge Catalog Tools and Samples",
+        "stars": 7303,
+        "language": "HTML",
+        "scrapeTime": "2026-07-17T09:47:49.271Z"
+      },
+      {
+        "rank": 19,
+        "name": "wonderwhy-er/DesktopCommanderMCP",
+        "url": "https://github.com/wonderwhy-er/DesktopCommanderMCP",
+        "description": "This is MCP server for Claude that gives it terminal control, file system search and diff file editing capabilities",
+        "stars": 8423,
+        "language": "TypeScript",
+        "scrapeTime": "2026-07-17T09:47:49.271Z"
+      },
+      {
+        "rank": 20,
+        "name": "iOfficeAI/OfficeCLI",
+        "url": "https://github.com/iOfficeAI/OfficeCLI",
+        "description": "OfficeCLI is the first and best Office suite purpose-built for AI agents to read, edit, and automate Word, Excel, and PowerPoint files. Free, open-source, single binary, no Office installation required.",
+        "stars": 18631,
+        "language": "C#",
+        "scrapeTime": "2026-07-17T09:47:49.271Z"
+      },
+      {
+        "rank": 21,
+        "name": "topoteretes/cognee",
+        "url": "https://github.com/topoteretes/cognee",
+        "description": "Cognee is the open-source AI memory platform for agents. Give your AI agents persistent long-term memory across sessions with a self-hosted knowledge graph engine.",
+        "stars": 27968,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:49.271Z"
+      },
+      {
+        "rank": 22,
+        "name": "bradautomates/claude-video",
+        "url": "https://github.com/bradautomates/claude-video",
+        "description": "Give Claude the ability to watch any video. /watch downloads, extracts frames, transcribes, hands it all to Claude.",
+        "stars": 8892,
+        "language": "Python",
+        "scrapeTime": "2026-07-17T09:47:49.271Z"
       }
     ]
   }
