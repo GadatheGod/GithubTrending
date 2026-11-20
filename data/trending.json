@@ -1,433 +1,433 @@
 {
   "today": {
     "period": "Today",
-    "scrapedAt": "2026-11-19T16:56:20.985Z",
+    "scrapedAt": "2026-11-20T16:30:07.931Z",
     "repos": [
       {
         "rank": 1,
         "name": "elementalsouls/Claude-BugHunter",
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-        "stars": 12078,
+        "stars": 13689,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.980Z"
+        "scrapeTime": "2026-11-20T16:30:07.924Z"
       },
       {
         "rank": 2,
         "name": "obra/superpowers",
         "url": "https://github.com/obra/superpowers",
         "description": "An agentic skills framework & software development methodology that works.",
-        "stars": 321848,
+        "stars": 322646,
         "language": "Shell",
-        "scrapeTime": "2026-11-19T16:56:20.981Z"
+        "scrapeTime": "2026-11-20T16:30:07.926Z"
       },
       {
         "rank": 3,
         "name": "HKUDS/CLI-Anything",
         "url": "https://github.com/HKUDS/CLI-Anything",
         "description": "\"CLI-Anything: Making ALL Software Agent-Native\" -- CLI-Hub: https://clianything.cc/",
-        "stars": 60355,
+        "stars": 61137,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.982Z"
+        "scrapeTime": "2026-11-20T16:30:07.926Z"
       },
       {
         "rank": 4,
         "name": "jingyaogong/minimind",
         "url": "https://github.com/jingyaogong/minimind",
         "description": "🧠 两小时从 0 训出你的 64M 大模型。Train your own 64M LLM from scratch in 2 hours.",
-        "stars": 66739,
+        "stars": 67560,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.982Z"
+        "scrapeTime": "2026-11-20T16:30:07.927Z"
       },
       {
         "rank": 5,
         "name": "cursor/plugins",
         "url": "https://github.com/cursor/plugins",
         "description": "Cursor plugin specification and official plugins",
-        "stars": 17479,
+        "stars": 17767,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:20.983Z"
+        "scrapeTime": "2026-11-20T16:30:07.928Z"
       },
       {
         "rank": 6,
         "name": "firecrawl/firecrawl",
         "url": "https://github.com/firecrawl/firecrawl",
         "description": "Knowledge infrastructure to make your agents smarter. Search, scrape and 550+ data providers through one API.",
-        "stars": 203837,
+        "stars": 204971,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:20.983Z"
+        "scrapeTime": "2026-11-20T16:30:07.928Z"
       },
       {
         "rank": 7,
         "name": "nginx/nginx",
         "url": "https://github.com/nginx/nginx",
         "description": "The official NGINX Open Source repository.",
-        "stars": 32266,
+        "stars": 32502,
         "language": "C",
-        "scrapeTime": "2026-11-19T16:56:20.984Z"
+        "scrapeTime": "2026-11-20T16:30:07.928Z"
       },
       {
         "rank": 8,
         "name": "openvinotoolkit/openvino",
         "url": "https://github.com/openvinotoolkit/openvino",
         "description": "OpenVINO™ is an open source toolkit for optimizing and deploying AI inference",
-        "stars": 11506,
+        "stars": 11709,
         "language": "C++",
-        "scrapeTime": "2026-11-19T16:56:20.984Z"
+        "scrapeTime": "2026-11-20T16:30:07.928Z"
       },
       {
         "rank": 9,
         "name": "cathrynlavery/diagram-design",
         "url": "https://github.com/cathrynlavery/diagram-design",
         "description": "Editorial diagram design for Claude Code, Codex, GitHub Copilot, Cursor, Factory Droid, Qoder, and Pi. 45 diagram types. Self-contained HTML + SVG. No shadows. No Mermaid slop.",
-        "stars": 68480,
+        "stars": 69136,
         "language": "HTML",
-        "scrapeTime": "2026-11-19T16:56:20.984Z"
+        "scrapeTime": "2026-11-20T16:30:07.929Z"
       },
       {
         "rank": 10,
         "name": "mvanhorn/last30days-skill",
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-        "stars": 70633,
+        "stars": 71278,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.984Z"
+        "scrapeTime": "2026-11-20T16:30:07.929Z"
       },
       {
         "rank": 11,
         "name": "google-labs-code/stitch-skills",
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "stars": 10627,
+        "stars": 10931,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:20.984Z"
+        "scrapeTime": "2026-11-20T16:30:07.929Z"
       },
       {
         "rank": 12,
         "name": "mjmirza/app-store-compliance",
         "url": "https://github.com/mjmirza/app-store-compliance",
         "description": "Avoid common App Store and Google Play rejections. Open playbook and pre-submission guard with 117 documented rejection patterns and fixes, privacy manifest and Data safety checks, 95 tracked deadlines (EU AI Act, DSA, COPPA, age laws), and a skill for AI coding agents.",
-        "stars": 1652,
+        "stars": 2505,
         "language": "Shell",
-        "scrapeTime": "2026-11-19T16:56:20.985Z"
+        "scrapeTime": "2026-11-20T16:30:07.929Z"
       },
       {
         "rank": 13,
         "name": "Tracer-Cloud/opensre",
         "url": "https://github.com/Tracer-Cloud/opensre",
         "description": "The open-source agent for CI/CD reliability.",
-        "stars": 12986,
+        "stars": 13453,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.985Z"
+        "scrapeTime": "2026-11-20T16:30:07.930Z"
       },
       {
         "rank": 14,
         "name": "toeverything/AFFiNE",
         "url": "https://github.com/toeverything/AFFiNE",
         "description": "There can be more than Notion and Miro. AFFiNE(pronounced [ə‘fain]) is a next-gen knowledge base that brings planning, sorting and creating all together. Privacy first, open-source, customizable and ready to use.",
-        "stars": 74943,
+        "stars": 75598,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:20.985Z"
+        "scrapeTime": "2026-11-20T16:30:07.930Z"
       },
       {
         "rank": 15,
         "name": "XiaoYouChR/Ghost-Downloader-3",
         "url": "https://github.com/XiaoYouChR/Ghost-Downloader-3",
         "description": "The only downloader you need. 下载器的集大成者。",
-        "stars": 12477,
+        "stars": 13492,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.985Z"
+        "scrapeTime": "2026-11-20T16:30:07.931Z"
       },
       {
         "rank": 16,
         "name": "zhouxiaoka/autoclip",
         "url": "https://github.com/zhouxiaoka/autoclip",
         "description": "AutoClip｜一个链接，一键出片。开源 AI 视频剪辑桌面工具，将播客、访谈、课程等长视频自动剪成短视频，生成字幕、封面和发布文案，适配抖音、小红书、TikTok、Reels 与 YouTube Shorts。Open-source AI video clipping & content repurposing.",
-        "stars": 11065,
+        "stars": 11999,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:20.985Z"
+        "scrapeTime": "2026-11-20T16:30:07.931Z"
       }
     ]
   },
   "weekly": {
     "period": "Weekly",
-    "scrapedAt": "2026-11-19T16:56:22.285Z",
+    "scrapedAt": "2026-11-20T16:30:09.955Z",
     "repos": [
       {
         "rank": 1,
         "name": "backnotprop/plannotator",
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-        "stars": 13616,
+        "stars": 13823,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.953Z"
       },
       {
         "rank": 2,
         "name": "google-labs-code/stitch-skills",
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "stars": 10627,
+        "stars": 10931,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 3,
         "name": "GoogleChrome/modern-web-guidance-src",
         "url": "https://github.com/GoogleChrome/modern-web-guidance-src",
         "description": "Keep your coding agent up to date with the latest web best practices",
-        "stars": 9045,
+        "stars": 9450,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 4,
         "name": "alibaba/open-code-review",
         "url": "https://github.com/alibaba/open-code-review",
         "description": "Secure, fast, efficient, battle-tested at Alibaba's scale. Hybrid architecture code review tool: deterministic pipelines + LLM Agent, precise line-level comments, built-in multi-language ruleset (NPE, thread-safety, XSS, SQL injection), OpenAI & Anthropic compatible.",
-        "stars": 54338,
+        "stars": 54618,
         "language": "Go",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 5,
         "name": "mvanhorn/last30days-skill",
         "url": "https://github.com/mvanhorn/last30days-skill",
         "description": "AI agent skill that researches any topic across Reddit, X, YouTube, HN, Polymarket, and the web - then synthesizes a grounded summary",
-        "stars": 70633,
+        "stars": 71278,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 6,
         "name": "ChromeDevTools/chrome-devtools-mcp",
         "url": "https://github.com/ChromeDevTools/chrome-devtools-mcp",
         "description": "Chrome DevTools for coding agents",
-        "stars": 58327,
+        "stars": 58491,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.283Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 7,
         "name": "tradermonty/claude-trading-skills",
         "url": "https://github.com/tradermonty/claude-trading-skills",
         "description": "Claude Code skills for equity investors and traders — market analysis, technical charting, economic calendars, screeners, and trading strategy development.",
-        "stars": 7191,
+        "stars": 7373,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.954Z"
       },
       {
         "rank": 8,
         "name": "ag-ui-protocol/ag-ui",
         "url": "https://github.com/ag-ui-protocol/ag-ui",
         "description": "AG-UI: the Agent-User Interaction Protocol. Bring Agents into Frontend Applications.",
-        "stars": 20585,
+        "stars": 20758,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       },
       {
         "rank": 9,
         "name": "meta/astryx",
         "url": "https://github.com/meta/astryx",
         "description": "An open source design system that's fully customizable and agent ready",
-        "stars": 30857,
+        "stars": 31255,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       },
       {
         "rank": 10,
         "name": "pookjw/HermesEnabler",
         "url": "https://github.com/pookjw/HermesEnabler",
         "description": "Enable Hermès Watch Faces on any Apple Watch devices",
-        "stars": 2237,
+        "stars": 2287,
         "language": "Objective-C",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       },
       {
         "rank": 11,
         "name": "we-promise/sure",
         "url": "https://github.com/we-promise/sure",
         "description": "The personal finance app for everyone (by everyone)",
-        "stars": 16646,
+        "stars": 16855,
         "language": "Ruby",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       },
       {
         "rank": 12,
         "name": "dream-num/univer",
         "url": "https://github.com/dream-num/univer",
         "description": "Build your own AI office with Univer Office SDK. Bring editing, calculation, collaboration, and file processing into your product for people and AI agents. Built on an extensible open-source core.",
-        "stars": 30399,
+        "stars": 30881,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:22.284Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       },
       {
         "rank": 13,
         "name": "kajisho5/ffmpeg-skill",
         "url": "https://github.com/kajisho5/ffmpeg-skill",
         "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
-        "stars": 8222,
+        "stars": 8694,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:22.285Z"
+        "scrapeTime": "2026-11-20T16:30:09.955Z"
       }
     ]
   },
   "monthly": {
     "period": "Monthly",
-    "scrapedAt": "2026-11-19T16:56:23.984Z",
+    "scrapedAt": "2026-11-20T16:30:11.672Z",
     "repos": [
       {
         "rank": 1,
         "name": "Nutlope/hallmark",
         "url": "https://github.com/Nutlope/hallmark",
         "description": "Anti-AI-slop design skill for Claude Code, Cursor, and Codex.",
-        "stars": 57938,
+        "stars": 58435,
         "language": "CSS",
-        "scrapeTime": "2026-11-19T16:56:23.981Z"
+        "scrapeTime": "2026-11-20T16:30:11.669Z"
       },
       {
         "rank": 2,
         "name": "cloudflare/security-audit-skill",
         "url": "https://github.com/cloudflare/security-audit-skill",
         "description": "A coding-agent skill for multi-phase security audits with independently verified, machine-readable findings",
-        "stars": 75717,
+        "stars": 76161,
         "language": "JavaScript",
-        "scrapeTime": "2026-11-19T16:56:23.981Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 3,
         "name": "milind-soni/OpenMausBot",
         "url": "https://github.com/milind-soni/OpenMausBot",
         "description": "Open-source Grok Bot alternative with a virtual machine that bots can use",
-        "stars": 25718,
+        "stars": 26111,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 4,
         "name": "pingdotgg/t3code",
         "url": "https://github.com/pingdotgg/t3code",
         "description": "The best way to control Claude Code, Codex and more from any computer or phone",
-        "stars": 66139,
+        "stars": 67409,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 5,
         "name": "anthropics/skills",
         "url": "https://github.com/anthropics/skills",
         "description": "Public repository for Agent Skills",
-        "stars": 197593,
+        "stars": 197956,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 6,
         "name": "thedotmack/claude-mem",
         "url": "https://github.com/thedotmack/claude-mem",
         "description": "Persistent Context Across Sessions for Every Agent – Captures everything your agent does during sessions, compresses it with AI, and injects relevant context back into future sessions. Works with Claude Code, OpenClaw, Codex, Gemini, Hermes, Copilot, OpenCode + More",
-        "stars": 118374,
+        "stars": 118575,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 7,
         "name": "Jakeschincariol/instagram-agent-skill",
         "url": "https://github.com/Jakeschincariol/instagram-agent-skill",
         "description": "Thirteen Claude skills that run an Instagram account: Reels off 26 scored hook formulas, a viral research skill, a caption linter, and a humanizer. Free, MIT.",
-        "stars": 7261,
+        "stars": 7564,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.670Z"
       },
       {
         "rank": 8,
         "name": "backnotprop/plannotator",
         "url": "https://github.com/backnotprop/plannotator",
         "description": "The workspace to stay in the loop and on top of agents - shape, decide, plan, annotate, review code, share with team, and send all feedback to agents with one click.",
-        "stars": 13616,
+        "stars": 13823,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 9,
         "name": "HKUDS/DeepTutor",
         "url": "https://github.com/HKUDS/DeepTutor",
         "description": "DeepTutor: Lifelong Personalized Tutoring. https://deeptutor.info/.",
-        "stars": 60756,
+        "stars": 61031,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 10,
         "name": "pbakaus/impeccable",
         "url": "https://github.com/pbakaus/impeccable",
         "description": "The design vocabulary for your coding agent. Steer with polish and bolder, review with critique and audit, catch AI slop before it ships.",
-        "stars": 113326,
+        "stars": 113881,
         "language": "Rust",
-        "scrapeTime": "2026-11-19T16:56:23.982Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 11,
         "name": "sherlock-project/sherlock",
         "url": "https://github.com/sherlock-project/sherlock",
         "description": "Hunt down social media accounts by username across social networks",
-        "stars": 114495,
+        "stars": 114916,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 12,
         "name": "AgriciDaniel/claude-seo",
         "url": "https://github.com/AgriciDaniel/claude-seo",
         "description": "Universal SEO skill for Claude Code. 26 sub-skills + 19 sub-agents covering technical SEO, E-E-A-T, schema, GEO/AEO, agent readiness (Lighthouse Agentic Browsing, WebMCP, llms.txt), backlinks, local SEO, e-commerce, international SEO, Google APIs, and PDF/Excel reporting. 9 optional extensions for live SEO data.",
-        "stars": 30859,
+        "stars": 31085,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 13,
         "name": "google-labs-code/stitch-skills",
         "url": "https://github.com/google-labs-code/stitch-skills",
         "description": "A library of Agent Skills designed to work with the Stitch MCP server. Each skill follows the Agent Skills open standard, for compatibility with coding agents such as Antigravity, Gemini CLI, Claude Code, Cursor.",
-        "stars": 10627,
+        "stars": 10931,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.671Z"
       },
       {
         "rank": 14,
         "name": "heygen-com/hyperframes",
         "url": "https://github.com/heygen-com/hyperframes",
         "description": "AI video you can actually edit. HyperFrames is a free, open-source AI video editor. Describe any video and get a real project you can change down to the frame.",
-        "stars": 86910,
+        "stars": 87339,
         "language": "TypeScript",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.672Z"
       },
       {
         "rank": 15,
         "name": "elementalsouls/Claude-BugHunter",
         "url": "https://github.com/elementalsouls/Claude-BugHunter",
         "description": "A Claude Code skill bundle for bug hunting and external red-team work - 82 skills, 15 slash commands, 681 disclosed-report patterns curated across 24 core vulnerability classes, plus enterprise identity + infrastructure attack matrices.",
-        "stars": 12078,
+        "stars": 13689,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.672Z"
       },
       {
         "rank": 16,
         "name": "kajisho5/ffmpeg-skill",
         "url": "https://github.com/kajisho5/ffmpeg-skill",
         "description": "Local video editor for coding agents: 42 FFmpeg tools with a machine-readable contract and an MCP server, for Claude Code, Cursor and Codex. Cut, captions, reframe, loudness, platform exports. No cloud, no API keys.",
-        "stars": 8222,
+        "stars": 8694,
         "language": "Python",
-        "scrapeTime": "2026-11-19T16:56:23.983Z"
+        "scrapeTime": "2026-11-20T16:30:11.672Z"
       },
       {
         "rank": 17,
         "name": "vercel-labs/agent-browser",
         "url": "https://github.com/vercel-labs/agent-browser",
         "description": "Browser automation CLI for AI agents",
-        "stars": 52821,
+        "stars": 53031,
         "language": "Rust",
-        "scrapeTime": "2026-11-19T16:56:23.984Z"
+        "scrapeTime": "2026-11-20T16:30:11.672Z"
       }
     ]
   }
